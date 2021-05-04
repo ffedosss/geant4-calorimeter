@@ -1,0 +1,37 @@
+#/tracking/verbose 0
+#/analysis/setFileName {i}evalonlypositroncalor_e+_05gev  
+/analysis/setFileName 1mmsenless_gamma_1_3_mev_1particle_10000000event_pureSi_defaultcut
+/analysis/h1/set 3  10000 0.08 0.10
+#/analysis/h1/set 2 250 100. 110.0
+#/analysis/h1/set 3 250 1.e2 1.5e3 
+/analysis/h1/set 4 1000 1. 1400
+#/analysis/h1/set 4 1000 0. 5500.0e-14
+#/analysis/h1/set 5 200 0 180
+#/analysis/h1/set 6   250 0. 5.
+#/analysis/h1/set 8 10 0. 1.0
+#/analysis/h2/setX 1 150 -112.5 112.5
+#/analysis/h2/setY 1 150 -75 75 
+#set gps properties 
+/gps/particle gamma 
+/gps/energy 1.3 MeV
+/gps/direction 1 0 0
+/gps/pos/type Point
+/gps/pos/shape Circle
+/gps/pos/centre -2.49 0. 0. cm
+#/gps/pos/halfz 1.1 cm
+#/gps/pos/halfy 0.8 cm
+/gps/ang/type iso
+#/gps/ang/rot2 1 0 0 
+/gps/ang/maxtheta 1.19 rad
+/gps/ang/mintheta 1.95 rad
+/gps/ang/minphi 2.87 rad
+/gps/ang/maxphi	3.37 rad
+#/gps/ang/maxphi 0.01
+#/gps/ang/sigma_x 0.1 rad
+#/gps/pos/sigma_x 0 cm
+#/gps/pos/sigma_y 0 cm
+#/gun/energy 0.0013 GeV
+#/gun/position -2.49 0.0 0.0
+#/run/setCut  1 mm
+/control/execute vis.mac
+/run/beamOn 100

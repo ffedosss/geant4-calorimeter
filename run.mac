@@ -1,0 +1,4 @@
+#/control/loop run1.mac i 0.0 6.0 2
+# Initialize kernel
+/run/initialize
+/control/execute run1.mac
